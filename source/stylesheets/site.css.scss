@@ -4,8 +4,140 @@
 @import 'globals/index';
 @import "bootstrap-sprockets";
 @import 'bootstrap';
+@import "font-awesome";
 
 @import 'modules/index';
 
 @import 'base';
 @import 'layout';
+
+
+.big-background {
+  z-index:550;
+  height: 100%;
+  min-height:250px;
+  position:relative;
+  overflow:hidden;
+  background: url('http://rb-associates.imgix.net/lehigh-valley-animal-hospital.jpg?h=250') center center no-repeat;
+  background-size: cover;
+
+  .mbYTP_wrapper {
+    display: none;
+  }
+
+  .container {
+    position: static !important;
+  }
+
+  .bg {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.property__details {
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+  padding: 1rem;
+  display: inline-block;
+  color: #ffffff;
+  background: fade-out(#000000, 0.45);
+}
+
+.property__details__title {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.property__details__specs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1;
+
+  .fa {
+    display: inline-block;
+    margin-right: 0.75rem;
+  }
+
+  .location {
+    width: 100%;
+    padding-bottom: 1.5rem;
+  }
+
+  .price {
+    width: 50%;
+    font-size: 2rem;
+    color: #FF9711;
+  }
+
+  .availibility {
+    width: 50%;
+
+    .amount {
+      margin-left: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.125rem;
+      height: 2.125rem;
+      font-size: 1.25rem;
+      border-radius: 50%;
+      background: #FF9711;
+    }
+  }
+
+  .footage {
+    display: none;
+  }
+}
+
+.properties {
+  background: $section-gray-bg;
+
+  .section {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background: #ffffff;
+  }
+
+  .table {
+    margin: 0;
+  }
+
+  .section__title {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 2rem;
+    margin: 0 0 2rem;
+
+    img {
+      height: 2.25rem;
+      display: inline-block;
+      margin-right: 0.75rem;
+    }
+  }
+
+  .section__title:after {
+    display: none;
+  }
+}
+
+.space {
+  padding: 1rem;
+  border: 1px solid $brand-primary;
+
+  .table > tbody > tr > th {
+    padding-left: 0;
+  }
+}
+
+.space__title {
+  margin: 0 0 1rem;
+  color: $brand-primary;
+}
