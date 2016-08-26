@@ -21,18 +21,25 @@
   background: url('http://rb-associates.imgix.net/lehigh-valley-animal-hospital.jpg?h=250') center center no-repeat;
   background-size: cover;
 
+  @include breakpoint(md) {
+    display: flex;
+    min-height: 400px;
+  }
+
   .mbYTP_wrapper {
     display: none;
+
+    @include breakpoint(md) {
+      display: block;
+    }
   }
 
   .container {
     position: static !important;
-  }
 
-  .bg {
-    display: block;
-    height: 100%;
-    object-fit: cover;
+    @include breakpoint(md) {
+      position: relative !important;
+    }
   }
 }
 
