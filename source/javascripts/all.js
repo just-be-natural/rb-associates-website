@@ -13,4 +13,5 @@ $(document).ready(function() {
     margin: 15,
     dots: true
   });
+
 });
