@@ -8,9 +8,18 @@ body {
   &.gray {
     background: $section-gray-bg;
   }
+
+  @include breakpoint(md) {
+    padding: 8rem 0;
+  }
 }
 
 .section__title {
   margin: 0 0 5rem;
+  text-transform: uppercase;
   @include triangle;
+
+  @include breakpoint(md) {
+    margin: 0 0 6rem;
+  }
 }

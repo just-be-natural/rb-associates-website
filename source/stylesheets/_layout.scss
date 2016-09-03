@@ -33,33 +33,3 @@
     float: right;
   }
 }
-
-// Billboard
-
-.billboard {
-  padding: 7rem 1.25rem;
-  background: url(../images/park_plaza.jpg) center center no-repeat;
-  background-size: 120% 100%;
-  text-align: center;
-
-  @include breakpoint(md) {
-    padding: 22rem 12rem;
-  }
-
-  .billboard-title {
-    margin: 0;
-    font-size: 3.25rem;
-    text-transform: uppercase;
-
-    @include breakpoint(md) {
-      font-size: 4rem;
-    }
-  }
-
-  .billboard-cta {
-    margin: 3rem 0 0;
-    padding: 1.125rem 1rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-  }
-}
