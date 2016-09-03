@@ -1,0 +1,40 @@
+.footer {
+  padding: 3rem 0;
+  background: #000000;
+
+  &,
+  a {
+    color: #ffffff;
+  }
+
+  .footer-widget {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    margin: 0 0 2rem;
+    letter-spacing: 0.125rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: $footer-color;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+
+  .nav li:first-child a {
+    padding-top: 0;
+  }
+
+  .copyright {
+    margin: 1rem 0 0;
+    font-size: 1.25rem;
+    color: $footer-color;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}

@@ -2,6 +2,7 @@
 //= require jquery.mb.ytplayer/dist/jquery.mb.YTPlayer
 //= require bootstrap
 //= require owl.carousel/dist/owl.carousel.min
+//= require magnific-popup/dist/jquery.magnific-popup.min
 
 //= require 'app'
 
@@ -14,4 +15,11 @@ $(document).ready(function() {
     dots: true
   });
 
+  $('.owl-carousel').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery:{
+      enabled: true
+    }
+  });
 });

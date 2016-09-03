@@ -50,3 +50,11 @@
     @media #{$query} { @content; }
   }
 }
+
+@mixin plain-link($color: #ffffff) {
+  &:hover,
+  &:focus {
+    color: $color;
+    text-decoration: none;
+  }
+}
