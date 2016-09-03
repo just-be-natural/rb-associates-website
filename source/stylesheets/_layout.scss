@@ -16,6 +16,24 @@
   margin-right: 5px;
 }
 
+.navbar-nav {
+  @include breakpoint(md) {
+    float: right;
+  }
+
+  > li > a {
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+  }
+}
+
+.contact-btn {
+  @include breakpoint(md) {
+    margin: 0.75rem 0 0 1rem;
+    float: right;
+  }
+}
+
 // Billboard
 
 .billboard {
@@ -24,9 +42,18 @@
   background-size: 120% 100%;
   text-align: center;
 
+  @include breakpoint(md) {
+    padding: 22rem 12rem;
+  }
+
   .billboard-title {
     margin: 0;
     font-size: 3.25rem;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+      font-size: 4rem;
+    }
   }
 
   .billboard-cta {
