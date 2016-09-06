@@ -1,5 +1,11 @@
 // Header
 
+.navbar {
+  @include breakpoint(md) {
+    height: 60px;
+  }
+}
+
 .navbar-fixed-top {
   border: 0;
 }
@@ -9,6 +15,14 @@
 
   img {
     height: 2.5rem;
+  }
+
+  @include breakpoint(md) {
+    padding-top: 1.5rem;
+
+    img {
+      height: 3rem;
+    }
   }
 }
 
@@ -24,12 +38,16 @@
   > li > a {
     text-transform: uppercase;
     letter-spacing: 0.15rem;
+
+    @include breakpoint(md) {
+      padding: 20px 15px;
+    }
   }
 }
 
 .contact-btn {
   @include breakpoint(md) {
-    margin: 0.75rem 0 0 1rem;
+    margin: 1.25rem 0 0 1rem;
     float: right;
   }
 }
