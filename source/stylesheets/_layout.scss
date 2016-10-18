@@ -37,7 +37,6 @@
 
   > li > a {
     text-transform: uppercase;
-    letter-spacing: 0.05rem;
 
     @include breakpoint(md) {
       padding: 20px 15px;
