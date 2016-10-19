@@ -210,7 +210,8 @@
   height: 250px;
   position:relative;
   overflow:hidden;
-  background: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') center center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 
   @include breakpoint(md) {
@@ -239,6 +240,12 @@
       position: relative !important;
     }
   }
+}
+
+.big-background {
+  &.property_25th-street-easton { background-image: url('https://rb-associates.imgix.net/25th-street-easton.jpg?w=1920') }
+  &.property_268-brodhead { background-image: url('https://rb-associates.imgix.net/268-brodhead.jpg?w=1920') }
+  &.property_locust-manor{ background-image: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') }
 }
 
 .property__details {
