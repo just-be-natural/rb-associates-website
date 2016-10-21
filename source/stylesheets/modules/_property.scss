@@ -246,6 +246,8 @@
   &.property_25th-street-easton { background-image: url('https://rb-associates.imgix.net/25th-street-easton.jpg?w=1920') }
   &.property_268-brodhead { background-image: url('https://rb-associates.imgix.net/268-brodhead.jpg?w=1920') }
   &.property_locust-manor{ background-image: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') }
+  &.courtney-1 { background-image: url('https://rb-associates.imgix.net/courtney-1.jpg?w=1920') }
+  &.courtney-2 { background-image: url('https://rb-associates.imgix.net/courtney-2.jpg?w=1920') }
 }
 
 .property__details {
@@ -298,7 +300,7 @@
   .price {
     width: 50%;
     font-size: 2rem;
-    color: rgb(251, 164, 13);
+    color: rgb(5, 241, 184);
   }
 
   .availibility {
@@ -371,8 +373,13 @@
 }
 
 .space {
+  margin-bottom: 1.5rem;
   padding: 1rem;
   border: 1px solid darken($table-border-color, 5%);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   .table > tbody > tr > th {
     padding-left: 0;
