@@ -237,6 +237,7 @@
     position: static !important;
 
     @include breakpoint(md) {
+      z-index: 0;
       position: relative !important;
     }
   }
@@ -248,13 +249,32 @@
   &.property_locust-manor{ background-image: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') }
   &.courtney-1 { background-image: url('https://rb-associates.imgix.net/courtney-1.jpg?w=1920') }
   &.courtney-2 { background-image: url('https://rb-associates.imgix.net/courtney-2.jpg?w=1920') }
+  &.courtney-3 { background-image: url('https://rb-associates.imgix.net/courtney-3.jpg?w=1920') }
+  &.park-plaza { background-image: url('https://rb-associates.imgix.net/park-plaza.jpg?w=1920') }
+  &.hecktown-business-park { background-image: url('https://rb-associates.imgix.net/hecktown-business-park.jpg?w=1920') }
+  &.forks-landing { background-image: url('https://rb-associates.imgix.net/forks-landing.jpg?h=400') }
+  &.lafayette-fairfield {
+    @include breakpoint(md) {
+      .container {
+        display: flex;
+        position: static !important;
+        align-items: flex-end;
+      }
+
+      .property__details {
+        position: relative !important;
+      }
+    }
+
+  }
 }
 
 .property__details {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 1rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
   display: inline-block;
   color: #ffffff;
   background: fade-out(#000000, 0.4);
@@ -262,6 +282,9 @@
   @include breakpoint(md) {
     bottom: 3rem;
     left: 15px;
+    width: auto;
+    padding: 1rem 2rem;
+    z-index: 2000;
   }
 }
 
@@ -272,24 +295,21 @@
   text-transform: uppercase;
 
   @include breakpoint(md) {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     padding-bottom: 0.75rem;
   }
 }
 
 .property__details__specs {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   line-height: 1;
 
   .fa {
     display: inline-block;
     margin-right: 0.75rem;
+    color: $brand-primary;
   }
 
   .location {
-    width: 100%;
     padding-bottom: 1.5rem;
 
     @include breakpoint(md) {
@@ -298,13 +318,15 @@
   }
 
   .price {
-    width: 50%;
-    font-size: 2rem;
-    color: rgb(5, 241, 184);
+    padding-right: 1.5rem;
+    font-size: 1.75rem;
+    color: #fff;
   }
 
   .availibility {
-    width: 50%;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 
     .amount {
       margin-left: 0.75rem;
@@ -315,13 +337,18 @@
       height: 2.125rem;
       font-size: 1.25rem;
       border-radius: 2px;
-      background: #222222;
+      background: $brand-primary;
     }
   }
 
   .footage {
     display: none;
   }
+}
+
+.property__details__price-availibility {
+  display: flex;
+  align-items: center;
 }
 
 .properties_details {

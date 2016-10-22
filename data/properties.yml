@@ -31,7 +31,7 @@
   label_type: lease
   address: 3864 Courtney St, Bethlehem, PA 18017
 -
-  name: Courtney 3
+  name: Courtney III
   lat: 40.6785167
   long: -75.35736279999999
   image: courtney-3.jpg
@@ -71,10 +71,11 @@
   label_type: sale
   address: Sullivan Trail, Forks Township, PA 18040
 -
+  id: lafayette
   name: Lafayette & West Fairfield
   lat: 40.7055188
   long: -75.2142216
   image: lafayette-fairfield.jpg
-  url: lafayette-fairfield
+  url: lafayette-street-and-west-fairfield-avenue
   label_type: sale
   address: Lafayette St. & W. Fairfield Ave, Easton, PA 18042

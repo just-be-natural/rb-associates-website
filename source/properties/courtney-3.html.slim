@@ -1,23 +1,24 @@
 ---
-title: Lafayette Street & West Fairfield Ave, Easton, PA 18042
+title: 3894 2550 Brodhead Rd, Bethlehem, PA 18017
 page_class: properties_details
 ---
 
-section.big-background.lafayette-fairfield(data-ng-controller='PropertiesShowCtrl as vm')
+section.big-background.courtney-3
+  #bgndVideo.player data-property="{videoURL:'https://youtu.be/TQOPeaS_Ebw', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:64, opacity:1}"
+
   .container
-    ui-gmap-google-map(center='vm.map.center' zoom='vm.map.zoom' ng-init=" vm.setProperty('lafayette') ")
-      ui-gmap-markers(models='vm.map.markers' coords="'coords'")
     .property__details
-      h1.property__details__title College Hill
+      h1.property__details__title Courtney III
       .property__details__specs
         .location
           i.fa.fa-map-marker
-          | Easton | PA
-        .property__details__price-availibility
-          .price Price Not Disclosed
-          .availibility
-            | Lots Available:
-            span.amount 1
+          | Bethlehem | PA
+        .price $1 /SF/Year
+        .availibility
+          | Units Available:
+          span.amount 1
+
+        .footage 1,500 SF
         
 .container
   .row
@@ -110,9 +111,17 @@ section.big-background.lafayette-fairfield(data-ng-controller='PropertiesShowCtr
             span Photo Gallery
 
           .owl-carousel.owl-theme
-            - 1.times do |idx|
-              a.test-popup-link(href="https://rb-associates.imgix.net/lafayette-fairfield/lafayette-fairfield-#{idx+1}.jpg?w=800")
-                img(src="https://rb-associates.imgix.net/lafayette-fairfield/lafayette-fairfield-#{idx+1}.jpg?w=400")
+            - 6.times do |idx|
+              a.test-popup-link(href="https://rb-associates.imgix.net/courtney-3/courtney-3-#{idx+1}.jpg?w=800")
+                img(src="https://rb-associates.imgix.net/courtney-3/courtney-3-#{idx+1}.jpg?w=400")
     
     .col-md-4
       = partial 'layouts/partials/contact_form'
+
+      section.section
+        .inner
+          h4.section__title
+            = image_tag 'Video.svg'
+            span Videos
+          
+          <iframe width="100%" src="https://www.youtube.com/embed/TQOPeaS_Ebw" frameborder="0" allowfullscreen></iframe>

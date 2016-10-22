@@ -11,3 +11,4 @@
 
 //= require 'app'
 //= require angular/properties/properties-index-ctrl
+//= require angular/properties/properties-show-ctrl
