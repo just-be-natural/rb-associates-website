@@ -10,6 +10,7 @@ $section-gray-bg: #f7f7f7;
 $brand-primary:   $rb-blue;
 $brand-success:   #77c720;
 $footer-color:    #919496;
+$gray-base:       #181818;
 
 //== Components
 //
@@ -23,9 +24,9 @@ $border-radius-small:       1px !default;
 //
 //##
 
+$navbar-height:                   55px !default;
 $navbar-default-color:            #333333;
 $navbar-default-bg:               fade-out(#ffffff, 0.05);
-// $navbar-default-bg:               fade-out(#52ff00, 0.05);
 
 $navbar-default-link-color:       #333333;
 $navbar-default-link-hover-color: #111111;
