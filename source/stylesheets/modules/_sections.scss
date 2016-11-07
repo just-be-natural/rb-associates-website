@@ -1,12 +1,12 @@
 .section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 
   &.gray {
     background: $section-gray-bg;
   }
 
   @include breakpoint(md) {
-    padding: 8rem 0;
+    padding: 7rem 0;
   }
 }
 
@@ -28,5 +28,25 @@
 
   @include breakpoint(md) {
     font-size: 2rem;
+  }
+}
+
+.section--contact {
+  .home-showcase__content {
+
+    .inner {
+      @include breakpoint(md) {
+        padding: 0 30rem;
+      }
+    }
+
+    .btn {
+      margin-top: 1.5rem;
+      text-transform: uppercase;
+
+      @include breakpoint(md) {
+        margin-top: 2.5rem;
+      }
+    }
   }
 }
