@@ -6,7 +6,7 @@
   }
 
   @include breakpoint(md) {
-    padding: 7rem 0;
+    padding: 9rem 0;
   }
 }
 
@@ -31,22 +31,45 @@
   }
 }
 
+.section__lead {
+  margin-bottom: 3rem;
+  text-align: center;
+
+  @include breakpoint(md) {
+    margin-bottom: 5rem;
+    padding: 0 25rem;
+  }
+}
+
 .section--contact {
-  .home-showcase__content {
+  padding: 3rem 0;
+  background: $rb-red;
+  text-align: center;
+  color: #ffffff;
 
-    .inner {
-      @include breakpoint(md) {
-        padding: 0 30rem;
-      }
-    }
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .btn {
-      margin-top: 1.5rem;
-      text-transform: uppercase;
-
-      @include breakpoint(md) {
-        margin-top: 2.5rem;
-      }
+    @include breakpoint(md) {
+      flex-direction: row;
+      align-items: center;
     }
   }
+
+  .ready {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+
+    @include breakpoint(md) {
+      margin: 0 3rem 0 0;
+      font-size: 3rem;
+    }
+  }
+}
+
+.section--clients {
+  padding: 1.5rem 0;
+  background: #f3f3f4;
 }
