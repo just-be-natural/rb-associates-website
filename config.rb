@@ -36,13 +36,26 @@ activate :contentful do |f|
   f.access_token  = '09d86bb272bad2d92b1db19ea7e0cb33be1144da46115f618bcff1de1136060d'
   f.cda_query = { limit: 10000 }
   f.content_types = {
-    homepage: 'homepage'
+    homepage: 'homepage',
+    propertyPage: 'propertyPage'
   }
 end
 
 ###
 # Helpers
 ###
+
+helpers do
+  def property_pages
+    properties = [].tap do |properties|
+      data.site.propertyPage.each do |p|
+        properties << p[1]
+      end
+    end
+
+    properties.sort_by!(&:name)
+  end
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
