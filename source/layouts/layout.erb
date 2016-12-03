@@ -11,12 +11,13 @@
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %> <%= current_page.data.page_class %>">
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <%= partial 'layouts/partials/nav' %>
+
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
 
         <div class="navbar-header">
@@ -44,7 +45,7 @@
         </div>
       </div>
 
-    </nav>
+    </nav> -->
 
     <%= yield %>
 
@@ -53,5 +54,6 @@
     <% end %>
 
     <script async='' defer='' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAR2oIlybRzb1TK5NQCMXFfQD57p2bODI"></script>
+    <%= javascript_include_tag :all %>
   </body>
 </html>
