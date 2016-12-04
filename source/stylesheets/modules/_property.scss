@@ -422,11 +422,15 @@
 
 .spaceTabs {
   a {
-    color: $gray-dark;
-    font-weight: 700;
+
     @include breakpoint(sm) {
       @include font-size(1.6);
     }
+  }
+
+  > li.active > a {
+    font-weight: 700;
+    color: $gray-dark;
   }
 }
 
@@ -445,6 +449,7 @@
 }
 
 .space__title {
+  @include font-size(1.6);
   margin: 0 0 1rem;
   color: $brand-primary;
 }

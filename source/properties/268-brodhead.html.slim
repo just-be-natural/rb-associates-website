@@ -183,10 +183,13 @@ section.big-background.property_268-brodhead
     .col-md-4
       = partial 'layouts/partials/contact_form'
 
-      section.section
-        .inner
-          h4.section__title
-            = image_tag 'Video.svg'
-            span Videos
 
-          <iframe width="100%" src="https://www.youtube.com/embed/sLB5v0XsoSw" frameborder="0" allowfullscreen></iframe>
+      - if property&.videos&.any?
+        section.section
+          .inner
+            h4.section__title
+              = image_tag 'Video.svg'
+              span Videos
+
+          - property.videos.each do |video|
+            iframe(width='100%' src="#{video.url}" frameborder="0" allowfullscreen="")

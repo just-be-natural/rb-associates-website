@@ -13,7 +13,8 @@ class PropertyPage
     :description,
     :backgroundImage,
     :detailSections,
-    :propertySpaceTypes
+    :propertySpaceTypes,
+    :videos
   ]
 
   attr_reader(*ATTRS)
@@ -67,6 +68,5 @@ class PropertyPage
       return "#{count} Spaces"
     end
   end
-
 
 end
