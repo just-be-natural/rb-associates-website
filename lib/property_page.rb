@@ -3,6 +3,8 @@ class PropertyPage
   ATTRS = [
     :name,
     :url,
+    :bgVideo,
+    :backgroundImage,
     :price,
     :ownershipType,
     :address,
@@ -11,7 +13,6 @@ class PropertyPage
     :zipCode,
     :coordinates,
     :description,
-    :backgroundImage,
     :detailSections,
     :propertySpaceTypes,
     :videos
