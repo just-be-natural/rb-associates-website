@@ -3,21 +3,23 @@ title: 268 Brodhead Rd, Bethlehem, PA 18017
 page_class: properties_details
 ---
 
+- property = find_property_by_url('268-brodhead')
+
 section.big-background.property_268-brodhead
   #bgndVideo.player data-property="{videoURL:'https://youtu.be/sLB5v0XsoSw', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:37, opacity:1}"
 
   .container
     .property__details
-      h1.property__details__title 268 Brodhead Rd
+      h1.property__details__title= property.name
       .property__details__specs
         .location
           i.fa.fa-map-marker
-          | Bethlehem | PA
+          span= "#{property.city} | #{property.state}"
         .property__details__price-availibility
-          .price $7-$14 /SF/Year
+          .price= property.price
           .availibility
-            | Spaces Available:
-            span.amount 1
+            //span
+            //span.amount= property.vacancy
 
 .container
   .row
@@ -28,14 +30,28 @@ section.big-background.property_268-brodhead
           h2.section__title
             = image_tag 'chat.svg'
             span Description
-          p This incredible building features a fantastic layout and distinct architecture. The interior layout is extremely well thought out with office in the front with assemble/warehouse in the back. The site is currently undergoing all new mechanicals and roofing and a 20 sq ft warehouse addition.
-          p Located in the center of the thriving Lehigh Valley Industrial Park, near FedEx.
+          = Kramdown::Document.new(property.description).to_html
 
       section.section
         .inner
           h2.section__title
             = image_tag 'info.svg'
             span Essential Information
+
+          - property.detailSections.each do |section|
+            h3= section.name
+
+            .row
+              - section.details.each_slice(2).to_a.each do |array|
+                .col-md-6
+                  table.table
+                    tbody
+                      - array.each do |detail|
+                        tr
+                          th= detail.name
+                          td= detail.value
+
+
 
           h3 Lot
 
@@ -122,32 +138,36 @@ section.big-background.property_268-brodhead
 
       section.section
         .inner
+
           h2.section__title
             = image_tag 'SpaceAvailable.svg'
-            span 1 Space Available
+            span= "#{property.spaces_count_with_label} Available"
 
-          .space
-            h4.space__title Space 1
+          ul.nav.nav-tabs.spaceTabs(role='tablist')
+            - property.propertySpaceTypes.each_with_index do |space_type, idx|
+              - cssClass = (idx = 0) ? 'active' : ''
+              li(class="#{cssClass}" role='presentation')
+                a(href="##{space_type.name}" aria-controls="#{space_type.name}" role='tab' data-toggle='tab')= space_type.name
 
-            .row
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Rental Rate
-                      td $7-$14 /SF/Year
-                    tr
-                      th Space Available
-                      td 33,722 SF
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Space Type
-                      td Office Building
-                    tr
-                      th Lease Type
-                      td NNN
+          .tab-content
+            - property.propertySpaceTypes.each_with_index do |space_type, idx|
+              - cssClass = (idx = 0) ? 'active' : ''
+
+              .tab-pane(id="#{space_type.name}" class="#{cssClass}" role="tabpanel")
+
+                - space_type.propertySpaces.each do |space|
+                  .space
+                    h4.space__title= space.name
+
+                    .row
+                      - space.details.each_slice(2).to_a.each do |array|
+                        .col-md-6
+                          table.table
+                            tbody
+                              - array.each do |detail|
+                                tr
+                                  th= detail.name
+                                  td= detail.value
 
       section.section
         .inner
